@@ -1,0 +1,19 @@
+{
+  "name": "lottery-dapp",
+  "version": "1.0.0",
+  "description": "Decentralized Lottery Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rohan Dhar",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^6.1.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "solc": "^0.4.24",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3": "^1.0.0-beta.36"
+  }
+}
