@@ -111,12 +111,59 @@ function (_Component) {
   _createClass(Lottery, [{
     key: "render",
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 6
         }
-      }, "Lottery Dapp");
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        }
+      }, "Total Lottery pool is 1000"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("form", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+        value: "0.5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
+        type: "submit",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      }, "Participate")), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      }), " ", __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("hr", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      }, "The manager of the Lottery app is"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      }, "Pick Winner"));
     }
   }]);
 
