@@ -31,18 +31,51 @@ class Lottery extends Component{
         this.setState({total_amount: total_amount});
     }
 
+
+    onSubmit = async (event) => {
+
+        event.preventDefault();
+        const address = await web3.eth.getAccounts();
+
+        if(this.state.participate_amount < 0.01)    return alert('Your entered amount is too low. Please enter an amount greater than 0.01');
+        this.setState({message: 'Please wait...'});
+        const enter_lottery = await lottery.methods.enterLottery().send({
+            from: address[0],
+            value: web3.utils.toWei(this.state.participate_amount, "ether")
+        });
+
+        this.setState({message: 'You have been added to the Lottery!'});
+
+    }
+
+    onClick = async ()=>{
+        this.setState({message: "Please wait..."});
+        const account = await web3.eth.getAccounts();
+
+        const winner = await lottery.methods.pickWinner().send({
+            from: account[0]
+        });
+
+        this.setState({message: "Payment sent to winner"});
+    }
+
     render(){
         return(
            <div>
-               <h1>Total Lottery pool is {this.state.total_amount}</h1>
-               <form>
-                   <input placeholder="0.5" />
+               <h1>Total Lottery pool is {web3.utils.fromWei(this.state.total_amount, "ether")}</h1>
+               <form onSubmit={this.onSubmit}>
+                   <input placeholder={this.state.participate_amount} onChange = {(event) =>{
+                       this.setState({
+                           participate_amount:event.target.value
+                       })
+                   }} />
                    <button type="submit">Participate</button>
                </form>
 
             <hr/> <br/><hr/>
             <p>The manager of the Lottery app is {this.state.manager}</p>
-            <button>Pick Winner</button>
+            <button  onClick={this.onClick}>Pick Winner</button>
+            <p>{this.state.message}</p>
            </div>
         );
     }
